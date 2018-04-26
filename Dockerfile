@@ -15,7 +15,7 @@ RUN pip install -e .
 
 # Install package again, now with actual code. No dependencies are installed this time, to enable fast docker builds when just the code has changed.
 COPY safaribooks/ /app/safaribooks/
-RUN pip install --no-index --no-deps -e .
+RUN pip install  --no-index --no-deps -e .
 
 VOLUME ["/app/converted"]
 
